@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  person: one
+  nickname: MyString
+  military_code: MyString
+  military_register: MyString
+  rank: one
+
+two:
+  person: two
+  nickname: MyString
+  military_code: MyString
+  military_register: MyString
+  rank: two
