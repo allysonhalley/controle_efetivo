@@ -38,6 +38,11 @@ class AddressesController < ApplicationController
     @address.destroy
   end
 
+  # DELETE all /addresses/drop
+  def drop
+    Address.collection.drop
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_address

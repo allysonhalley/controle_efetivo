@@ -38,6 +38,12 @@ class RankTypesController < ApplicationController
     @rank_type.destroy
   end
 
+  # DELETE /rank_types/drop
+  def drop
+    RankType.collection.drop
+  end
+  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_rank_type

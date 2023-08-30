@@ -9,4 +9,7 @@ class Person
   field :gender, type: String
   field :email, type: String
   field :phone, type: String
+
+  has_many :military, dependent: :destroy
+  has_many :address, dependent: :destroy
 end
