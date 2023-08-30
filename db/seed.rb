@@ -1,9 +1,25 @@
 #rails g scaffold RankType name:string acronym:string type:string
-#rails g scaffold Rank full_rank:string short_rank:string acronym:string type:string rate:number
+#rails g scaffold Rank full_rank:string short_rank:string acronym:string type:string rate:number rank_type:references
 #rails g scaffold Person name:string cpf:string rg:string birthdate:date placebirth:string gender:string email:string phone:string
-#rails g scaffold Military person:references nickname:string military_code:string military_register:string rank:references rank_type:references
+#rails g scaffold Military person:references nickname:string military_code:string military_register:string rank:references
 #rails g scaffold Address person:references cep:string street:string number:string neighborhood:string city:string state:string country:string complement:string
 
+
+RankType.create!(
+    name:"QOCBM",
+    acronym:"QOC",
+    type:"OFICIAL"
+)
+RankType.create!(
+    name:"QOABM",
+    acronym:"QOA",
+    type:"OFICIAL"
+)
+RankType.create!(
+    name:"QBMG-1",
+    acronym:"QBMG-1",
+    type:"PRAÇA"
+)
 
 puts "Creating Ranks"
 Rank.create!(
@@ -98,19 +114,3 @@ Rank.create!(
     rate:"13"
 )
 puts "Created "+ Rank.cout.to_s + " ranks!"
-
-RankType.create!(
-    name:"QOCBM",
-    acronym:"QOC",
-    type:"OFICIAL"
-)
-RankType.create!(
-    name:"QOABM",
-    acronym:"QOA",
-    type:"OFICIAL"
-)
-RankType.create!(
-    name:"QBMG-1",
-    acronym:"QBMG-1",
-    type:"PRÇA"
-)
